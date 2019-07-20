@@ -1,0 +1,17 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "MagazineDatasource": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "",
+    "database": "magazineMongoDB",
+    "password": "",
+    "name": "MagazineDatasource",
+    "user": "",
+    "useNewUrlParser": true,
+    "connector": "mongodb"
+  }
+}
