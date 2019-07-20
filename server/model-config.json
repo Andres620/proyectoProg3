@@ -34,5 +34,17 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "Author": {
+    "dataSource": "db",
+    "public": true
+  },
+  "editor": {
+    "dataSource": "db",
+    "public": true
+  },
+  "evaluator": {
+    "dataSource": "db",
+    "public": true
   }
 }

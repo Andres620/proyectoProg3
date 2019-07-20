@@ -1,0 +1,54 @@
+{
+  "name": "evaluator",
+  "plural": "evaluators",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "first-name": {
+      "type": "string",
+      "required": true
+    },
+    "second-name": {
+      "type": "string",
+      "required": true
+    },
+    "first-surname": {
+      "type": "string",
+      "required": true
+    },
+    "second-surname": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "membership": {
+      "type": "string",
+      "required": true
+    },
+    "education-level": {
+      "type": "string",
+      "required": true
+    },
+    "specialty": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
