@@ -1,0 +1,20 @@
+h1{
+    font-size: 40px;
+    line-height: 1.5em;
+    letter-spacing: -.2px;
+    color: white;
+    margin: 0;
+
+}
+
+h1 strong{
+    color: #026fff;
+}
+
+.hero{
+    height:300px ;
+    background-color: #1B2127;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
