@@ -2,8 +2,8 @@
   "db": {
     "host": "localhost",
     "port": 27017,
-    "url": "mongodb://localhost:27017/magazineMongoDB",
-    "database": "magazineMongoDB",
+    "url": "mongodb://localhost:27017/journalMongoDB",
+    "database": "journalMongoDB",
     "password": "",
     "name": "db",
     "user": "",
