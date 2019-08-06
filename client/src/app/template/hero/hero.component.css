@@ -12,21 +12,53 @@ h4 strong{
 }
 
 .hero{
-    height:300px ;
+    height:630px ;
+    width: 100%;
     background-color: #1B2127;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    text-align: center;
+    position: relative;
+    margin: 0;
+    padding: 0;
 }
 
-.hero-image{
-    object-fit: cover;
-}
-
-.container{
+.banner{
     height: inherit;
-    width: 85%;
-    display: flex;
-    align-items: inherit;
-    justify-content: inherit;
+    width: inherit;
+    display: inherit;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    background-size: cover;
+    background-attachment: local;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: banner 15s infinite;
+    
 }
+@keyframes banner {
+    0%,30%{
+        background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../../../assets/images/image-hero-1.png);
+        opacity: 1;
+    }
+    31%,34%{
+        opacity: 0.8;
+    }
+    35%, 65%{
+        background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../../../assets/images/image-hero-2.jpg);
+        opacity: 8;
+    }
+    66%,69%{
+        opacity: 0.8;
+    }
+    70%, 100%{
+        background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../../../assets/images/image-hero-3.jpg);
+        opacity: 1;
+    }
+}
+
