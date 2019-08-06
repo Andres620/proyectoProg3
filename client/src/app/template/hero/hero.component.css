@@ -1,4 +1,4 @@
-h1{
+h4{
     font-size: 40px;
     line-height: 1.5em;
     letter-spacing: -.2px;
@@ -7,8 +7,8 @@ h1{
 
 }
 
-h1 strong{
-    color: #026fff;
+h4 strong{
+    color: gray;
 }
 
 .hero{
@@ -17,4 +17,16 @@ h1 strong{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.hero-image{
+    object-fit: cover;
+}
+
+.container{
+    height: inherit;
+    width: 85%;
+    display: flex;
+    align-items: inherit;
+    justify-content: inherit;
 }
