@@ -1,38 +1,40 @@
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-<div class="container center">
-  <a href="#login" class="btn btn-large teal modal-trigger">Login</a>
-</div>
-
-<div id="login" class="modal ">
-  <h5 class="modal-close">&#10005;</h5>
-  <div class="modal-content center">
-    <h4>Login Form</h4>
-    <br>
-
-    <form action="#">
-      <div class="input-field">
-        <i class="material-icons prefix">person</i>
-        <input type="text" id="name">
-        <label for="name">Username</label>
-      </div>
-      <br>
-
-      <div class="input-field">
-        <i class="material-icons prefix">lock</i>
-        <input type="password" id="pass">
-        <label for="pass">Password</label>
-      </div>
-      <br>
-
-      <div class="left" style="margin-left:20px;">
-        <input type="checkbox" id="check">
-        <label for="check">Remember Me</label>
-      </div>
-      <br>
-      
-      <input type="submit" value="Login" class="btn btn-large">
-      
-    </form>
+<div class="had-container">
+  <div class="row center loginCont"><br>
+    <div class="col m8 s8 offset-m2 offset-s2 center">
+      <h4 class="truncate bg-card-user">
+        <img src="https://cdn3.iconfinder.com/data/icons/happily-colored-snlogo/128/medium.png" alt=""
+          class="circle responsive-img">
+        <div class="row login">
+          <h4>Login.</h4>
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col m12 s12">
+                <i class="material-icons iconis prefix">account_box</i>
+                <input id="icon_prefix" type="text" class="validate">
+                <label for="icon_prefix">Email</label>
+              </div>
+            </div>
+            <div class="row center">
+              <div class="input-field col m12 s12">
+                <i class="material-icons iconis prefix">enhanced_encryption</i>
+                <input id="password" type="password" class="validate">
+                <label for="password">Password</label>
+              </div>
+              <label class="col m12">
+                <a><b>Forgot Password?</b></a>
+              </label>
+            </div>
+            <div class="row">
+              <button class="btn waves-effect waves-light" type="submit" name="action">LOGIN!</button>
+            </div>
+          </form>          
+          <div class=" row register">
+              <label class="col m4">
+                <a><b>Register Now!</b></a>
+              </label>
+            </div>
+        </div>
+      </h4>
+    </div>
   </div>
 </div>
