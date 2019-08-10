@@ -7,7 +7,7 @@ import { LogoutComponent } from './logout/logout.component';
 
 const routes: Routes = [
   {
-    path: 'users/register',
+    path: 'user/register',
     component: RegisterComponent
   },
   {

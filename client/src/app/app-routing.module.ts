@@ -6,13 +6,13 @@ import { UsersModule } from './modules/users/users.module';
 
 const routes: Routes = [
   {
-    path:'nav',
+    path:'hero',
     component: HeroComponent
   },
   {
     path:'',
     pathMatch: 'full',
-    redirectTo:'/nav'
+    redirectTo:'/hero'
   },
   {
     path: '**',
