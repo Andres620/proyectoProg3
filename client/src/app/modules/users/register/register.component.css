@@ -1,0 +1,36 @@
+
+.bg-card-user {
+    background: rgba(0,77,64,.5);
+    margin: 10px;
+      padding: 15px ;
+  }
+  .truncate >img {
+      width: 180px;
+      margin-top: 6px;
+      margin-bottom: 6px;
+  }
+  /* LOGIN */
+  .logueo {/* PARALLAX */
+      height: 650px!important;
+  }
+  i.iconis {
+      font-size: 1em!important;
+      margin-top: 8px;
+  }
+  .login {
+      border: 1px solid #FFF;
+      width: 80%;
+      margin: 0 auto;
+      background-color: rgba(255,255,255,.7);
+      padding: 20px;
+  }
+  .loginCont{
+    background-image: url(../../../../assets/images/image-hero-2.jpg);
+    margin: 0;
+    display: flexbox
+  }
+  .register{
+    align-items: flex-end;
+    justify-content: right;
+  }
+  

@@ -3,20 +3,31 @@ import { Routes, RouterModule } from '@angular/router';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
+import { FormLoginGuard } from 'src/app/guards/form-login.guard';
+import { UrlInjectionsGuard } from 'src/app/guards/url-injections.guard';
 
 
 const routes: Routes = [
   {
     path: 'user/register',
-    component: RegisterComponent
+    component: RegisterComponent,
+    canActivate: [          //se activa cuando no esta logeado
+      FormLoginGuard
+    ]
   },
   {
     path: 'user/login',
-    component: LoginComponent
+    component: LoginComponent,
+    canActivate: [           //cuando no esta logeado
+      FormLoginGuard
+    ]
   },
   {
     path: 'user/logout',
-    component: LogoutComponent
+    component: LogoutComponent,
+    canActivate:[           //se activa cuando esta logeado
+      UrlInjectionsGuard
+    ]
   }
 
 ];

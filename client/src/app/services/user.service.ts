@@ -48,6 +48,15 @@ export class UserService {
     localStorage.setItem("userInfo", JSON.stringify(user));
   }
 
+  saveNewUser(user: UserModel): Observable<UserModel> {
+    return this.http.post<UserModel>(`${base_url}users`, 
+      user,
+      {
+        headers: new HttpHeaders({
+          'Content-Type': 'application/json'
+        })
+      });
+  }
   getUserInformation() {
     let userInfo = localStorage.getItem("userInfo");
     if (isNullOrUndefined(userInfo)) {

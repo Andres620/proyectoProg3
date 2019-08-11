@@ -7,10 +7,10 @@ export interface UserModel{
     secondsurname: string;
     country: string;
     phone: string;
-    membership: string,
+    membership: string;
     educationlevel: string;
+    specialty: string;
     email: string;
     password: string;
-    rol: string,
-    user: UserModel
+    rol: string
 }
