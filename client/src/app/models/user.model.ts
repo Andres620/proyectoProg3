@@ -12,5 +12,6 @@ export interface UserModel{
     specialty: string;
     email: string;
     password: string;
-    rol: string
+    rol: string;
+    user: UserModel
 }

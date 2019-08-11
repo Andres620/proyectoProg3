@@ -10,7 +10,7 @@ import { UserModel } from 'src/app/models/user.model';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(private userServie: UserService, private router: Router) { }
+  constructor(private userService: UserService, private router: Router) { }
 
 
   user: UserModel = {
@@ -27,14 +27,15 @@ export class RegisterComponent implements OnInit {
     email: null,
     password: null,
     rol: null,
-    id: null
+    id: null,
+    user: null
   }
 
   ngOnInit() {
   }
 
   saveNewUser():void{
-    this.userServie.saveNewUser(this.user).subscribe(item =>{
+    this.userService.saveNewUser(this.user).subscribe(item =>{
       alert('The User has been stored successfully!!!');
       this.router.navigate(["/hero"])   //cambiaar despues al home del usuario logeado 
     })

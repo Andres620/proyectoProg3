@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private userServie: UserService,private router: Router) { }
+  constructor(private userService: UserService,private router: Router) { }
 
   email: string = '';
   password: string = '';
@@ -18,10 +18,10 @@ export class LoginComponent implements OnInit {
   }
 
   onLoginBtnClick():void{
-    this.userServie.loginUser(this.email, this.password).subscribe(item =>{
+    this.userService.loginUser(this.email, this.password).subscribe(item =>{
       console.log(item);
-      this.userServie.saveToken(item.id);
-      this.userServie.saveUserInformation(item.user);
+      this.userService.saveToken(item.id);
+      this.userService.saveUserInformation(item.user);
       this.router.navigate(["/hero"]);
     } );
   }
