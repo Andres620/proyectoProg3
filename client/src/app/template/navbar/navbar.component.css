@@ -11,9 +11,19 @@
     height: 50px;
 }
 .brand-logo{
-    margin-left: 100px;
+    float: center;
+    /* margin-left: 100px; */
 }
 
 .h1{
     color: white
 }
+
+.sidenav-trigger{
+    float: right;
+}
+.sidenav{
+    background-color: gray;
+    opacity: 0.9;
+}
+

@@ -1,5 +1,8 @@
 $(document).ready(function () {
-  $('.sidenav').sidenav();
+  $('.sidenav').sidenav({
+    edge: 'right',
+    closeOnClick: true
+  });
   $(".dropdown-trigger").dropdown();
   $('.modal').modal();
   $("#loginNav").on('click',function(){
