@@ -17,14 +17,14 @@
       font-size: 1em!important;
       margin-top: 8px;
   }
-  .login {
+  .signin {
       border: 1px solid #FFF;
       width: 80%;
       margin: 0 auto;
       background-color: rgba(255,255,255,.7);
       padding: 20px;
   }
-  .loginCont{
+  .registerCont{
     background-image: url(../../../../assets/images/image-hero-2.jpg);
     margin: 0;
     display: flexbox
@@ -33,4 +33,22 @@
     align-items: flex-end;
     justify-content: right;
   }
-  
+
+  .bg-card-user {
+    background: rgba(0,77,64,.5);
+    margin: 10px;
+    padding: 15px ;
+  }
+
+  .RegisterContainer{
+    border: 1px solid #FFF;
+    width: 80%;
+    margin: 0 auto;
+    background-color: rgba(255,255,255,.7);
+    padding: 20px;
+  }
+
+  #registeremail,
+  #registerpassword{
+    height: 30px;
+  }
