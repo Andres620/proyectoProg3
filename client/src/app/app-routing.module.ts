@@ -4,6 +4,7 @@ import { HeroComponent } from './template/hero/hero.component';
 import { PageNotFoundComponent } from './template/page-not-found/page-not-found.component';
 import { UsersModule } from './modules/users/users.module';
 import { HomeComponent } from './template/home/home.component';
+import { ArticleModule } from './modules/article/article.module';
 
 const routes: Routes = [
   {
@@ -28,7 +29,8 @@ const routes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forRoot(routes),
-    UsersModule
+    UsersModule,
+    ArticleModule
   ],
   exports: [RouterModule]
 })

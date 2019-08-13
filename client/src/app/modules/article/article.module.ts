@@ -12,6 +12,11 @@ import { ArticleEditorComponent } from './article-editor/article-editor.componen
   imports: [
     CommonModule,
     ArticleRoutingModule
+  ],
+  exports: [
+    ArticleListComponent,
+    ArticleEditorComponent,
+    ArticleCreatorComponent
   ]
 })
 export class ArticleModule { }

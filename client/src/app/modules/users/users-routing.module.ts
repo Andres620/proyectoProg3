@@ -7,6 +7,7 @@ import { FormLoginGuard } from 'src/app/guards/form-login.guard';
 import { UrlInjectionsGuard } from 'src/app/guards/url-injections.guard';
 
 
+
 const routes: Routes = [
   {
     path: 'user/register',
@@ -29,7 +30,6 @@ const routes: Routes = [
       UrlInjectionsGuard
     ]
   }
-
 ];
 
 @NgModule({
