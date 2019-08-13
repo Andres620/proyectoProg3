@@ -10,7 +10,8 @@
   </ul>
   <nav class="black">
     <div class="nav-wrapper">
-      <a href="hero" class="brand-logo">Vector</a>
+      <a *ngIf="!userLogged" href="hero"  class="brand-logo">Vector</a>
+      <a *ngIf="userLogged" href="home"  class="brand-logo">Vector</a>
       <a href="#" data-target="mobile-nav" class="sidenav-trigger">
         <i class="material-icons">menu</i>
       </a>

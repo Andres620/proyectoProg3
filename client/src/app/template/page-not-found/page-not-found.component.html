@@ -1,3 +1,4 @@
 <section class="center">
-    <button routerLink="/home">go back</button>
+    <button *ngIf="userLogged" routerLink="/home">go back</button>
+    <button *ngIf="!userLogged" routerLink="/hero">go back</button>
 </section>

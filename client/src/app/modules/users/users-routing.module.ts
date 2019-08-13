@@ -12,21 +12,21 @@ const routes: Routes = [
   {
     path: 'user/register',
     component: RegisterComponent,
-    canActivate: [          //se activa cuando no esta logeado
+    canActivate: [          //se activa cuando esta logeado y se lo lleva al home
       FormLoginGuard
     ]
   },
   {
     path: 'user/login',
     component: LoginComponent,
-    canActivate: [           //cuando no esta logeado
+    canActivate: [           
       FormLoginGuard
     ]
   },
   {
     path: 'user/logout',
     component: LogoutComponent,
-    canActivate:[           //se activa cuando esta logeado
+    canActivate:[           //se activa cuando no esta logeado y lo lleva al login
       UrlInjectionsGuard
     ]
   }

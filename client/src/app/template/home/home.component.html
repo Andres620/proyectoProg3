@@ -1,6 +1,6 @@
-<div class="container services">
+<div class="container services" *ngIf="userRol == 'author'">
 
-    <h1 class="center-align">Options</h1>
+    <h1 class="center-align" >Options</h1>
 
     <div class="row">
         <div class="col s12 m6 13 center-align">
@@ -10,7 +10,7 @@
                     <h5>list</h5>
                     <p>list of articles</p>
                 </div>
-                <div class="card-action"><a routerLink="/user/author/list">GO</a></div>
+                <div class="card-action"><a routerLink="/user/author/article/list">GO</a></div>
             </div>
         </div>
         <div class="col s12 m6 13 center-align">
@@ -20,7 +20,7 @@
                     <h5>Create</h5>
                     <p>Create an send a new article</p>
                 </div>
-                <div class="card-action"><a routerLink="/user/author/creator">GO</a></div>
+                <div class="card-action"><a routerLink="/user/author/article/creator">GO</a></div>
             </div>
         </div>
     </div>

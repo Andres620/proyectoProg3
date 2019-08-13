@@ -3,20 +3,30 @@ import { Routes, RouterModule } from '@angular/router';
 import { ArticleListComponent } from './article-list/article-list.component';
 import { ArticleCreatorComponent } from './article-creator/article-creator.component';
 import { ArticleEditorComponent } from './article-editor/article-editor.component';
+import { UrlInjectionsGuard } from 'src/app/guards/url-injections.guard';
 
 
 const routes: Routes = [
   {
-    path: 'user/author/list',
-    component: ArticleListComponent
+    path: 'user/author/article/list',
+    component: ArticleListComponent,
+    canActivate:[           //se activa cuando no esta logeado y lo lleva al login
+      UrlInjectionsGuard
+    ]
   },
   {
-    path: 'user/author/creator',
-    component: ArticleCreatorComponent
+    path: 'user/author/article/creator',
+    component: ArticleCreatorComponent,
+    canActivate:[           //se activa cuando no esta logeado y lo lleva al login
+      UrlInjectionsGuard
+    ]
   },
   {
-    path: 'user/author/editor',
-    component: ArticleEditorComponent
+    path: 'user/author/article/editor',
+    component: ArticleEditorComponent,
+    canActivate:[           //se activa cuando no esta logeado y lo lleva al login
+      UrlInjectionsGuard
+    ]
   }
 
 ];
