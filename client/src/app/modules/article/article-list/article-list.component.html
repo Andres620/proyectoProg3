@@ -7,14 +7,14 @@
                 Title
             </th>
             <th>
-                Abstract
+                Name
             </th>
             <th>
                 Keywords
             </th>
-            <th>
+            <!-- <th>
                 Link
-            </th>
+            </th> -->
             <th>
                 Status
             </th>
@@ -23,8 +23,9 @@
         <tbody>
             <tr *ngFor="let c of articleList">
                 <td>{{c.title}}</td>
-                <td>{{c.abstract}}</td>
+                <td>{{c.authorFirstName}}</td>
                 <td>{{c.keywords}}</td>
+                <td>{{c.status}}</td>
                 <!-- <td><a class="waves-effect waves-light btn" (click)="Editperson(c)">Edit</a></td> -->
                 <!-- <td>
                     <a *ngIf="flagValidationToDelete; else validationButtons" class="waves-effect waves-light btn"
