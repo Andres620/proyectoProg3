@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
       console.log(item);
       this.userService.saveToken(item.id);
       this.userService.saveUserInformation(item.user);
-      this.router.navigate(["/hero"]);
+      this.router.navigate(["/home"]);
     } );
   }
 

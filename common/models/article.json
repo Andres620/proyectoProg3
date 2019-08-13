@@ -1,0 +1,45 @@
+{
+  "name": "article",
+  "plural": "articles",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "abstract": {
+      "type": "string",
+      "required": true
+    },
+    "keywords": {
+      "type": "string",
+      "required": true
+    },
+    "authorFirstName": {
+      "type": "string",
+      "required": true
+    },
+    "authorSecondName": {
+      "type": "string"
+    },
+    "authorFirstSurname": {
+      "type": "string",
+      "required": true
+    },
+    "authorSecondSurname": {
+      "type": "string"
+    },
+    "authorEmail": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

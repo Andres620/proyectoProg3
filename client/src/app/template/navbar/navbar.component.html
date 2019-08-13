@@ -16,7 +16,7 @@
       </a>
       <ul class="right hide-on-med-and-down">
 
-        <li *ngIf="!userLogged"><a href="sass.html">Sass</a></li>
+        <li *ngIf="userLogged && userRol=='editor'"><a href="sass.html">editor</a></li>
         <li *ngIf="!userLogged"><a href="badges.html">Components</a></li>
         <!-- Dropdown Trigger -->
         <li *ngIf="!userLogged"><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i

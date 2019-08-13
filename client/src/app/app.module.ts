@@ -8,6 +8,7 @@ import { HeroComponent } from './template/hero/hero.component';
 import { FooterComponent } from './template/footer/footer.component';
 import { PageNotFoundComponent } from './template/page-not-found/page-not-found.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './template/home/home.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     HeroComponent,
     FooterComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

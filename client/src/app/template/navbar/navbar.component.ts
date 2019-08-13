@@ -13,6 +13,7 @@ export class NavbarComponent implements OnInit {
 
   userLogged: boolean = false;
   completeName: string = '';
+  userRol: string = '';
 
   ngOnInit() {
     this.showMenu();
@@ -25,6 +26,8 @@ export class NavbarComponent implements OnInit {
     }else{
       this.userLogged = true;
       this.completeName = userInfo.realm;
+      this.userRol = userInfo.rol;
+      console.log('que dicen',userInfo.rol);
     }
   }
 }

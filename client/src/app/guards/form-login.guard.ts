@@ -13,7 +13,7 @@ export class FormLoginGuard implements CanActivate {
   }
   canActivate(){
     if(!isNullOrUndefined(this.userService.getUserInformation())){
-      this.router.navigate(["/hero"]);
+      this.router.navigate(["/home"]);
       return false;
     }else{
       return true;

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HeroComponent } from './template/hero/hero.component';
 import { PageNotFoundComponent } from './template/page-not-found/page-not-found.component';
 import { UsersModule } from './modules/users/users.module';
+import { HomeComponent } from './template/home/home.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,10 @@ const routes: Routes = [
     path:'',
     pathMatch: 'full',
     redirectTo:'/hero'
+  },
+  {
+    path: 'home',
+    component: HomeComponent
   },
   {
     path: '**',
