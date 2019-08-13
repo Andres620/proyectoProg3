@@ -23,4 +23,10 @@ export class ArticleListComponent implements OnInit {
     });
   }
 
+  // getAllArticlesbyAuthorId(): void {
+  //   this.artService.getAllArticles().subscribe(items => {
+  //     this.articleList = items;
+  //   });
+  // }
+
 }
