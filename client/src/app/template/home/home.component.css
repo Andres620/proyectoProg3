@@ -1,9 +1,15 @@
-.containerCards{
-    display: flex;
-    margin: 50px;
-    padding: 20px;
+.card h5{
+    padding: 10px 0px;
+}
+.card{
+    transition: .5s;
+    background: #eee;
 }
 
-.cards{
-    width: 400px;
+.card:hover i , h5{
+    color: #c2185b;
+}
+.card:hover{
+    transform: scale(1.03);
+    background: #fff;
 }
