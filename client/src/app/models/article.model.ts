@@ -8,5 +8,7 @@ export interface ArticleModel{
     authorFirstSurname: string;
     authorSecondSurname: string;
     authorEmail: string;
+    authorId: string;
+    status: string;
     article: ArticleModel
 }

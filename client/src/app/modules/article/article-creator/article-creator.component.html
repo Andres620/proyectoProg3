@@ -1,69 +1,49 @@
-<div class="had-container">
-    <div class="row center registerCont"><br>
-        <div class="col m8 s8 offset-m2 offset-s2 center">
-            <h4 class="truncate bg-card-user">
-                <img src="https://cdn3.iconfinder.com/data/icons/happily-colored-snlogo/128/medium.png" alt=""
-                    class="circle responsive-img">
-                <div class="row signin">
-                    <h4>Register.</h4>
-                    <form class="col s12">
-                        <div class="input-field col s3">
-                            <input id="registersecondname" name="registersecondname" type="text" class="validate" />
-                            <label for="registersecondname">keywords</label>
-                        </div>
-                        <div class="input-field col s2">
-                            <input id="registerfirstsurname" name="registerfirstsurname" type="text" class="validate"
-                                required />
-                            <label for="registerfirstsurname">First Name</label>
-                        </div>
-                        <div class="input-field col s3">
-                            <input id="registersecondsurname" name="registersecondsurname" type="text"
-                                class="validate" />
-                            <label for="registersecondsurname">Seconde Name</label>
-                        </div>
-                        <div class="input-field col s2">
-                            <input id="registerfirstsurname" name="registerfirstsurname" type="text" class="validate"
-                                required />
-                            <label for="registerfirstsurname">First Surname</label>
-                        </div>
-                        <div class="input-field col s3">
-                            <input id="registersecondsurname" name="registersecondsurname" type="text"
-                                class="validate" />
-                            <label for="registersecondsurname">Seconde Surname</label>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s3">
-                                <input id="registeremail" name="registeremail" type="text" class="validate" required />
-                                <label for="registeremail">Email</label>
-                            </div>
-                            <div class="input-field col s3">
-                                <input id="registerpassword" name="registerpassword" type="password" class="validate"
-                                    required />
-                                <label for="registerpassword">password</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s4">
-                                <input id="registerrealm" name="registerrealm" type="text" class="validate" required />
-                                <label for="registerrealm">Title</label>
-                            </div>
-                            <div class="input-field col s12">
-                                <input id="registerfirstname" name="registerfirstname" type="text" class="validate"
-                                    required />
-                                <label for="registerfirstname">abstract</label>
-                            </div>
-                        </div>
-
-                        <div class="row center"><a class="waves-effect waves-light btn"
-                                (click)="saveNewUser()">Register</a></div>
-                    </form>
-                    <div class=" row register">
-                        <label class="col m4">
-                            <a><b>Register Now!</b></a>
-                        </label>
-                    </div>
-                </div>
-            </h4>
-        </div>
+<div class="containerTitle">
+    <div class="row register">
+        <h5>Create new article</h5>
     </div>
+</div>
+<div class="containerBody">
+    <form class="col s12">
+        <div class="row">
+            <!-- <div class="input-field col s2">
+                <input id="" name="" type="text" class="validate" required />
+                <label for="">First Name</label>
+            </div>
+            <div class="input-field col s2">
+                <input id="" name="" type="text" class="validate"  />
+                <label for="">Second Name</label>
+            </div>
+            <div class="input-field col s2">
+                <input id="" name="" type="text" class="validate" required />
+                <label for="">First Surname</label>
+            </div>
+            <div class="input-field col s2">
+                <input id="" name="" type="text" class="validate"  />
+                <label for="">Second Lastname</label>
+            </div>
+            <div class="input-field col s2">
+                <input id="" name="" type="text" class="validate" required />
+                <label for="">Email</label>
+            </div> -->
+        </div>
+        <div class="row">
+            <div class="input-field col s2">
+                <input [(ngModel)]="article.title" id="createTitle" name="createTitle" type="text" class="validate" required />
+                <label for="createTitle">Title</label>
+            </div>
+            <div class="input-field col s2">
+                <input [(ngModel)]="article.keywords" id="createKeywords" name="createKeywords" type="text" class="validate" required />
+                <label for="createKeywords">Keywords</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input [(ngModel)]="article.abstract" id="createAbstract" name="createAbstract" type="text" class="validate" required />
+                <label for="createAbstract">Abstract</label>
+            </div>
+        </div>
+        <div class="row center"><a class="waves-effect waves-light btn "(click)="saveNewArticle()">SEND</a></div>
+    </form>
+
 </div>

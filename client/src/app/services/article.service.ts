@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ArticleModel } from '../models/article.model';
 
@@ -19,4 +19,14 @@ export class ArticleService {
   // getAllArticlesbyAuthorId(): Observable<ArticleModel[]> {
   //   return this.http.
   // }
+
+  saveNewArticle(article: ArticleModel): Observable<ArticleModel> {
+    return this.http.post<ArticleModel>(`${base_url}Articles`, 
+      article,
+      {
+        headers: new HttpHeaders({
+          'Content-Type': 'application/json'
+        })
+      });
+  }
 }
