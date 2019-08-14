@@ -16,7 +16,6 @@ export class ArticleEditorComponent implements OnInit {
   art: ArticleModel=null;
 
   ngOnInit() {
-    // this.Edit();
     this.searchArticle();
   }
 
@@ -35,29 +34,6 @@ export class ArticleEditorComponent implements OnInit {
     status: null,
     article: null
   }
-
-  // Edit(){
-  //   this.art=this.articleService.artOfList;
-  //   console.log('Si llego la wea',this.art)
-  // }
-
-
-  // EditArticle(): void {
-  //   this.article = {
-  //     id: this.art.id,
-  //     title: this.art.title,
-  //     abstract: this.art.abstract,
-  //     keywords: this.art.keywords,
-  //     authorFirstName: this.art.authorFirstName,
-  //     authorSecondName: this.art.authorSecondName,
-  //     authorFirstSurname: this.art.authorFirstSurname,
-  //     authorSecondSurname: this.art.authorSecondSurname,
-  //     authorEmail: this.art.authorEmail,
-  //     authorId: this.art.authorId,
-  //     status: this.art.status,
-  //     article: null
-  //   }
-  // }
 
   searchArticle(): void {
     let id = this.route.snapshot.params["id"];
