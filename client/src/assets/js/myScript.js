@@ -8,5 +8,6 @@ $(document).ready(function () {
   $("#loginNav").on('click',function(){
     console.log("clickaz")
   });
+  M.updateTextFields();
 });
 

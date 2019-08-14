@@ -5,28 +5,24 @@
 </div>
 <div class="containerBody">
     <form class="col s12">
-        <div class="row">
-        </div>
+        <input [(ngModel)]="article.id" name="article" type="hidden" id="id" />
         <div class="row">
             <div class="input-field col s2">
-                <input  id="editTitle" name="editTitle" type="text" class="validate"
-                    required />
+                <input  [(ngModel)]="article.title"  id="editTitle" name="editTitle" type="text" class="active" required />
                 <label for="editTitle">Title</label>
             </div>
             <div class="input-field col s2">
-                <input  id="editKeywords" name="editKeywords" type="text"
-                    class="validate" required />
+                <input [(ngModel)]="article.keywords" id="editKeywords" name="editKeywords" type="text" class="active" required />
                 <label for="editKeywords">Keywords</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <input  id="editAbstract" name="editAbstract" type="text"
-                    class="validate" required />
+                <input [(ngModel)]="article.abstract" id="editAbstract" name="editAbstract" type="text" class="active" required />
                 <label for="editAbstract">Abstract</label>
             </div>
         </div>
-        <div class="row center"><a class="waves-effect waves-light btn " (click)="saveNewArticle()">EDIT</a></div>
+        <div class="row center"><a class="waves-effect waves-light btn " (click)="updateArticle()">EDIT</a></div>
     </form>
 
 </div>

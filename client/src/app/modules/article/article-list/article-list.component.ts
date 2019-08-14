@@ -25,10 +25,10 @@ export class ArticleListComponent implements OnInit {
     });
   }
   
-  EditArticle(art): void {
-    console.log('viva el perico hpta',art)
-    this.artService.getArticleOfList(art);
-  }
+  // EditArticle(art): void {
+  //   console.log('viva el perico hpta',art)
+  //   this.artService.getArticleOfList(art);
+  // }
 
   // getAllArticlesbyAuthorId(): void {
   //   this.artService.getAllArticles().subscribe(items => {

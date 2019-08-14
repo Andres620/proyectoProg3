@@ -25,7 +25,7 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'user/author/article/editor',
+    path: 'user/author/article/editor/:id',
     component: ArticleEditorComponent,
     canActivate:[           //se activa cuando no esta logeado y lo lleva al login
       UrlInjectionsGuard,
