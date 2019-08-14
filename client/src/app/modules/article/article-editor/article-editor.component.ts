@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ArticleModel } from 'src/app/models/article.model';
 import { UserService } from 'src/app/services/user.service';
+import { ArticleService } from 'src/app/services/article.service';
 
 @Component({
   selector: 'app-article-editor',
@@ -9,43 +10,51 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class ArticleEditorComponent implements OnInit {
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private articleService: ArticleService) { }
+
+  art: ArticleModel=null;
 
   ngOnInit() {
+    this.Edit();
   }
-  // userInfo = this.userService.getUserInformation();
-  
 
-  // article: ArticleModel = {
-  //   id: null,
-  //   title: null,
-  //   abstract: null,
-  //   keywords: null,
-  //   authorFirstName: this.userInfo.firstname,
-  //   authorSecondName: this.userInfo.secondname,
-  //   authorFirstSurname: this.userInfo.firstsurname,
-  //   authorSecondSurname: this.userInfo.secondsurname,
-  //   authorEmail: this.userInfo.email,
-  //   authorId: this.userInfo.id,
-  //   status: 'send',
-  //   article: null
-  // }
 
-  // EditArticle(art): void {
-  //   this.article = {
-  //     id: art.id,
-  //     title: art.title,
-  //     abstract: art.abstract,
-  //     keywords: art.keywords,
-  //     authorFirstName: art.firstname,
-  //     authorSecondName: art.secondname,
-  //     authorFirstSurname: art.firstsurname,
-  //     authorSecondSurname: art.secondsurname,
-  //     authorEmail: art.email,
-  //     authorId: art.authorId,
-  //     status: art.status,
-  //     article: null
-  //   }
-  // }
+  article: ArticleModel = {
+    id: null,
+    title: null,
+    abstract: null,
+    keywords: null,
+    authorFirstName: null,
+    authorSecondName: null,
+    authorFirstSurname: null,
+    authorSecondSurname: null,
+    authorEmail: null,
+    authorId: null,
+    status: null,
+    article: null
+  }
+
+  Edit(){
+    this.art=this.articleService.artOfList;
+    console.log('Si llego la wea',this.art)
+  }
+
+
+  EditArticle(): void {
+    this.article = {
+      id: this.art.id,
+      title: this.art.title,
+      abstract: this.art.abstract,
+      keywords: this.art.keywords,
+      authorFirstName: this.art.authorFirstName,
+      authorSecondName: this.art.authorSecondName,
+      authorFirstSurname: this.art.authorFirstSurname,
+      authorSecondSurname: this.art.authorSecondSurname,
+      authorEmail: this.art.authorEmail,
+      authorId: this.art.authorId,
+      status: this.art.status,
+      article: null
+    }
+  }
 
 }

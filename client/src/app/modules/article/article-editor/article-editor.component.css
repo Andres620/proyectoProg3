@@ -1,0 +1,17 @@
+.containerTitle{
+    margin: 50px;
+    margin-bottom: 0%;
+}
+.containerBody{
+    margin: 0px 50px 50px 50px;
+    padding: 30px;
+    border-style: ridge
+}
+.edit{
+    margin: 0;
+    background-color: #2e6da4;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: white;
+}

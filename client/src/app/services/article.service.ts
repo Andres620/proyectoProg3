@@ -11,6 +11,8 @@ const base_url = 'http://localhost:3000/api/'
 })
 export class ArticleService {
 
+  artOfList: ArticleModel = null;
+
   constructor(private http: HttpClient) { }
   
   getAllArticles(): Observable<ArticleModel[]> {
@@ -28,5 +30,10 @@ export class ArticleService {
           'Content-Type': 'application/json'
         })
       });
+  }
+
+  getArticleOfList(art){
+    console.log('articulo en el servicio',art)
+    this.artOfList=art
   }
 }
