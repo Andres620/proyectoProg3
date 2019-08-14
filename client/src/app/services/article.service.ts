@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ArticleModel } from '../models/article.model';
+import { UserService } from './user.service';
 
 
 const base_url = 'http://localhost:3000/api/'
@@ -12,15 +13,18 @@ const base_url = 'http://localhost:3000/api/'
 export class ArticleService {
 
   artOfList: ArticleModel = null;
+  token: string = this.userservice.getToken();
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private userservice: UserService) { }
   
   getAllArticles(): Observable<ArticleModel[]> {
     return this.http.get<ArticleModel[]>(`${base_url}Articles`);
   }
-  // getAllArticlesbyAuthorId(): Observable<ArticleModel[]> {
-  //   return this.http.
-  // }
+
+  getAllArticlesbyAuthorId(authorId: string): Observable<ArticleModel[]> {
+    console.log("uthorId: "+authorId);
+    return this.http.get<ArticleModel[]>(`${base_url}articles/get-article-by-equals-authorId?authorId=${authorId}&access_token=${this.token}`)
+  }
 
   saveNewArticle(article: ArticleModel): Observable<ArticleModel> {
     return this.http.post<ArticleModel>(`${base_url}articles`, 
@@ -43,10 +47,5 @@ export class ArticleService {
           "content-type": "application/json"
         })
       });
-  }
-
-  getArticleOfList(art){
-    console.log('articulo en el servicio',art)
-    this.artOfList=art
   }
 }

@@ -13,10 +13,13 @@ export class ArticleListComponent implements OnInit {
 
   constructor(private artService: ArticleService,private userService: UserService) { }
 
+  userInfo = this.userService.getUserInformation();
+
   articleList: ArticleModel[] = [];
 
   ngOnInit() {
-    this.getAllArticles();
+    // this.getAllArticles();
+    this.getAllArticlesbyAuthorId();
   }
 
   getAllArticles(): void {
@@ -26,12 +29,12 @@ export class ArticleListComponent implements OnInit {
   }
   
 
-  // getAllArticlesbyAuthorId(): void {
-  //   this.artService.getAllArticles().subscribe(items => {
-  //     this.articleList = items;
-  //   });
-  // }
-
-
-
+  getAllArticlesbyAuthorId(): void {
+    console.log(this.userInfo);
+    this.artService.getAllArticlesbyAuthorId(this.userInfo.id).subscribe(items => {
+      console.log(items);
+      this.articleList = items;
+      console.log('console de articlelist',this.articleList)
+    });
+  }
 }
