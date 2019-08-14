@@ -45,26 +45,10 @@
       "type": "string",
       "required": true,
       "default": "send"
-    },
-    "validations": [],
-    "relations": {
-      "accessTokens": {
-        "type": "hasMany",
-        "model": "AccessToken",
-        "foreignKey": "authorId",
-        "options": {
-          "disableInclude": true
-        }
-      }
-    },
-    "acls": [
-      {
-        "principalType": "ROLE",
-        "principalId": "$everyone",
-        "permission": "ALLOW",
-        "property": "create"
-      }
-    ],
-    "methods": {}
-  }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
 }

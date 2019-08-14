@@ -50,7 +50,7 @@ export class ArticleCreatorComponent implements OnInit {
     authorSecondSurname: this.userInfo.secondsurname,
     authorEmail: this.userInfo.email,
     authorId: this.userInfo.id,
-    status: null,
+    status: 'send',
     article: null
   }
   print():void{

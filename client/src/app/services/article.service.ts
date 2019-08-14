@@ -21,7 +21,7 @@ export class ArticleService {
   // }
 
   saveNewArticle(article: ArticleModel): Observable<ArticleModel> {
-    return this.http.post<ArticleModel>(`${base_url}Articles`, 
+    return this.http.post<ArticleModel>(`${base_url}articles`, 
       article,
       {
         headers: new HttpHeaders({
