@@ -13,14 +13,6 @@ export class ArticleCreatorComponent implements OnInit {
 
   constructor(private userService: UserService, private articleService: ArticleService, private router: Router) { }
 
-  FirstName: string = '';
-  SecondName: string = '';
-  FirstSurname: string = '';
-  SecondSurname: string = '';
-  Email: string = '';
-  UserId: string = '';
-
-
   ngOnInit() {
     this.showUser();
     this.print();
@@ -30,14 +22,7 @@ export class ArticleCreatorComponent implements OnInit {
   userInfo = this.userService.getUserInformation();
   showUser(): void {
     let userInfo = this.userService.getUserInformation(); //retorna un null o la info del usuario
-    this.FirstName = userInfo.firstname;
-    this.SecondName = userInfo.firstname;
-    this.FirstSurname = userInfo.firstname;
-    this.SecondSurname = userInfo.firstname;
-    this.UserId=userInfo.id;
-    this.Email=userInfo.email;
     console.log('pero mira esa id papa', userInfo.id);
-    
   }
   article: ArticleModel = {
     id: null,

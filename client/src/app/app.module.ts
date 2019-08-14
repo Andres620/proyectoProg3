@@ -9,6 +9,7 @@ import { FooterComponent } from './template/footer/footer.component';
 import { PageNotFoundComponent } from './template/page-not-found/page-not-found.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './template/home/home.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({

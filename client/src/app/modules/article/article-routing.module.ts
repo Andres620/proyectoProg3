@@ -4,6 +4,7 @@ import { ArticleListComponent } from './article-list/article-list.component';
 import { ArticleCreatorComponent } from './article-creator/article-creator.component';
 import { ArticleEditorComponent } from './article-editor/article-editor.component';
 import { UrlInjectionsGuard } from 'src/app/guards/url-injections.guard';
+import { ProtectAuthorSessionGuard } from 'src/app/guards/protect-author-session.guard';
 
 
 const routes: Routes = [
@@ -11,21 +12,24 @@ const routes: Routes = [
     path: 'user/author/article/list',
     component: ArticleListComponent,
     canActivate:[           //se activa cuando no esta logeado y lo lleva al login
-      UrlInjectionsGuard
+      UrlInjectionsGuard,
+      ProtectAuthorSessionGuard
     ]
   },
   {
     path: 'user/author/article/creator',
     component: ArticleCreatorComponent,
     canActivate:[           //se activa cuando no esta logeado y lo lleva al login
-      UrlInjectionsGuard
+      UrlInjectionsGuard,
+      ProtectAuthorSessionGuard
     ]
   },
   {
     path: 'user/author/article/editor',
     component: ArticleEditorComponent,
     canActivate:[           //se activa cuando no esta logeado y lo lleva al login
-      UrlInjectionsGuard
+      UrlInjectionsGuard,
+      ProtectAuthorSessionGuard
     ]
   }
 
