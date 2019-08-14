@@ -28,7 +28,7 @@ export class UserService {
       });
   }
 
-  logoutUser(){
+  logoutUser() {
     localStorage.removeItem("userInfo");
     localStorage.removeItem("userTk");
   }
@@ -49,7 +49,7 @@ export class UserService {
   }
 
   saveNewUser(user: UserModel): Observable<UserModel> {
-    return this.http.post<UserModel>(`${base_url}users`, 
+    return this.http.post<UserModel>(`${base_url}users`,
       user,
       {
         headers: new HttpHeaders({

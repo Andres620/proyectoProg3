@@ -1,1 +1,28 @@
-<p>article-editor works!</p>
+<div class="containerTitle">
+    <div class="row edit">
+        <h5>Edit article</h5>
+    </div>
+</div>
+<div class="containerBody">
+    <form class="col s12">
+        <input [(ngModel)]="article.id" name="article" type="hidden" id="id" />
+        <div class="row">
+            <div class="input-field col s2">
+                <input  [(ngModel)]="article.title"  id="editTitle" name="editTitle" type="text" class="active" required />
+                <label for="editTitle">Title</label>
+            </div>
+            <div class="input-field col s2">
+                <input [(ngModel)]="article.keywords" id="editKeywords" name="editKeywords" type="text" class="active" required />
+                <label for="editKeywords">Keywords</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input [(ngModel)]="article.abstract" id="editAbstract" name="editAbstract" type="text" class="active" required />
+                <label for="editAbstract">Abstract</label>
+            </div>
+        </div>
+        <div class="row center"><a class="waves-effect waves-light btn " (click)="updateArticle()">EDIT</a></div>
+    </form>
+
+</div>

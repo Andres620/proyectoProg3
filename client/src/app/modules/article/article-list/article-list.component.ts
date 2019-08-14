@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ArticleModel } from 'src/app/models/article.model';
 import { ArticleService } from 'src/app/services/article.service';
+import { UserService } from 'src/app/services/user.service';
+import { ArticleEditorComponent } from '../article-editor/article-editor.component';
 
 @Component({
   selector: 'app-article-list',
@@ -9,12 +11,15 @@ import { ArticleService } from 'src/app/services/article.service';
 })
 export class ArticleListComponent implements OnInit {
 
-  constructor(private artService: ArticleService) { }
+  constructor(private artService: ArticleService,private userService: UserService) { }
+
+  userInfo = this.userService.getUserInformation();
 
   articleList: ArticleModel[] = [];
 
   ngOnInit() {
-    this.getAllArticles();
+    // this.getAllArticles();
+    this.getAllArticlesbyAuthorId();
   }
 
   getAllArticles(): void {
@@ -22,11 +27,14 @@ export class ArticleListComponent implements OnInit {
       this.articleList = items;
     });
   }
+  
 
-  // getAllArticlesbyAuthorId(): void {
-  //   this.artService.getAllArticles().subscribe(items => {
-  //     this.articleList = items;
-  //   });
-  // }
-
+  getAllArticlesbyAuthorId(): void {
+    console.log(this.userInfo);
+    this.artService.getAllArticlesbyAuthorId(this.userInfo.id).subscribe(items => {
+      console.log(items);
+      this.articleList = items;
+      console.log('console de articlelist',this.articleList)
+    });
+  }
 }

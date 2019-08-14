@@ -1,6 +1,10 @@
 <br>
-<fieldset>
-    <legend>List of Articles</legend>
+<div class="containerTitle">
+    <div class="row list">
+        <h5>Your list of article</h5>
+    </div>
+</div>
+<fieldset class="containerBody">
     <table>
         <thead>
             <th>
@@ -21,12 +25,16 @@
 
         </thead>
         <tbody>
-            <tr *ngFor="let c of articleList">
+            <tr *ngFor="let c of articleList.articles">
                 <td>{{c.title}}</td>
                 <td>{{c.authorFirstName}}</td>
                 <td>{{c.keywords}}</td>
                 <td>{{c.status}}</td>
-                <!-- <td><a class="waves-effect waves-light btn" (click)="Editperson(c)">Edit</a></td> -->
+                <td><a *ngIf=" c.status == 'send'; else results" class="waves-effect waves-light btn"
+                        routerLink="/user/author/article/editor/{{c.id}}">Edit</a></td>
+                <ng-template #results>
+                    <td><a class="waves-effect waves-light btn">Results</a></td>
+                </ng-template>
                 <!-- <td>
                     <a *ngIf="flagValidationToDelete; else validationButtons" class="waves-effect waves-light btn"
                         (click)="ChangeFlagValidation(c._id)">Delete</a>
