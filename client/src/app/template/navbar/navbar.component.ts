@@ -7,9 +7,11 @@ import { isNullOrUndefined } from 'util';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
+
 export class NavbarComponent implements OnInit {
 
   constructor(private userService: UserService) { }
+
 
   userLogged: boolean = false;
   completeName: string = '';
@@ -18,16 +20,18 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
     this.showMenu();
   }
-//metodo por si mas  adelante necesito mostrar o no un menu
+
+  //Metodo por si mas  adelante necesito mostrar o no un menu
   showMenu(): void {
     let userInfo = this.userService.getUserInformation(); //retorna un null o la info del usuario
     if (isNullOrUndefined(userInfo)) {
       this.userLogged = false;
-    }else{
+    } else {
       this.userLogged = true;
       this.completeName = userInfo.realm;
       this.userRol = userInfo.rol;
-      console.log('que dicen',userInfo.rol);
+
+      console.log('que dicen 1', userInfo.rol);
     }
   }
 }

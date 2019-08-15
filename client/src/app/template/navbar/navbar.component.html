@@ -10,8 +10,8 @@
   </ul>
   <nav class="black">
     <div class="nav-wrapper">
-      <a *ngIf="!userLogged" href="hero"  class="brand-logo">Vector</a>
-      <a *ngIf="userLogged" href="home"  class="brand-logo">Vector</a>
+      <a *ngIf="!userLogged" href="hero" class="brand-logo">VECTOR</a>
+      <a *ngIf="userLogged" href="home" class="brand-logo">VECTOR</a>
       <a href="#" data-target="mobile-nav" class="sidenav-trigger">
         <i class="material-icons">menu</i>
       </a>
@@ -20,10 +20,10 @@
         <li *ngIf="userLogged"><a routerLink="/home">Home</a></li>
         <li *ngIf="!userLogged"><a href="badges.html">Components</a></li>
         <!-- Dropdown Trigger -->
-        <li *ngIf="!userLogged"><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i
+        <li *ngIf="!userLogged"><a class="dropdown-trigger" href="#!" data-target="dropdown1">Login/Logout<i
               class="material-icons right">arrow_drop_down</i></a></li>
-        <li *ngIf="userLogged"><a class="dropdown-trigger sesionName" href="#!" data-target="dropdown1">{{completeName}}<i
-              class="material-icons right">arrow_drop_down</i></a></li>
+        <li *ngIf="userLogged"><a class="dropdown-trigger sesionName" href="#!"
+            data-target="dropdown1">{{completeName}}<i class="material-icons right">arrow_drop_down</i></a></li>
       </ul>
     </div>
   </nav>

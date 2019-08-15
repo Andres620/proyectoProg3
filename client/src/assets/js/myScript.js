@@ -5,9 +5,13 @@ $(document).ready(function () {
   });
   $(".dropdown-trigger").dropdown();
   $('.modal').modal();
-  $("#loginNav").on('click',function(){
+  $("#loginNav").on('click', function () {
     console.log("clickaz")
   });
   M.updateTextFields();
 });
 
+function recaptcha_callback() {
+  var v = document.querySelector('#login-btn');
+  v.removeAttribute('disabled');
+}

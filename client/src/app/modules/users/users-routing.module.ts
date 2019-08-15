@@ -19,14 +19,14 @@ const routes: Routes = [
   {
     path: 'user/login',
     component: LoginComponent,
-    canActivate: [           
+    canActivate: [
       FormLoginGuard
     ]
   },
   {
     path: 'user/logout',
     component: LogoutComponent,
-    canActivate:[           //se activa cuando no esta logeado y lo lleva al login
+    canActivate: [           //se activa cuando no esta logeado y lo lleva al login
       UrlInjectionsGuard
     ]
   }

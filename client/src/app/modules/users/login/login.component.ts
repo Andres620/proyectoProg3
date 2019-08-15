@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ɵɵcontainerRefreshEnd } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
 import { Router } from '@angular/router';
 
@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private userService: UserService,private router: Router) { }
+  constructor(private userService: UserService, private router: Router) { }
 
   email: string = '';
   password: string = '';
@@ -17,13 +17,13 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  onLoginBtnClick():void{
-    this.userService.loginUser(this.email, this.password).subscribe(item =>{
+  onLoginBtnClick(): void {
+    this.userService.loginUser(this.email, this.password).subscribe(item => {
       console.log(item);
       this.userService.saveToken(item.id);
       this.userService.saveUserInformation(item.user);
       this.router.navigate(["/home"]);
-    } );
+    });
   }
 
 
