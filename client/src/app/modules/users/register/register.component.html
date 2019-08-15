@@ -66,7 +66,18 @@
                                 <label for="registerpassword">password</label>
                             </div>
                         </div>
-                        <div class="row center"><a class="waves-effect waves-light btn" (click)="saveNewUser()">Register</a></div>
+                        <div class="row">
+                            <div class="g-recaptcha" data-sitekey="6Lc6FbMUAAAAAEo2yc64LmHdNRqgpvh7A7K6YzI7"
+                                data-callback="recaptcha_callback"></div>
+
+                            <!-- <button id="btn" (click)="saveNewUser()" class="btn waves-effect waves-light"
+                                disabled="true">REGISTER</button> -->
+
+                            <div class="row center">
+                                <a id="btn" class="waves-effect waves-light btn" (click)="saveNewUser()"
+                                    disabled="true">REGISTER</a>
+                            </div>
+                        </div>
                     </form>
                     <div class=" row register">
                         <label class="col m4">
@@ -78,4 +89,3 @@
         </div>
     </div>
 </div>
-

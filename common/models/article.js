@@ -1,10 +1,9 @@
 'use strict';
 
-
 //REVISAR LUEGO
 module.exports = function (Article) {
     Article.findArticleByAuthorID = function (authorId, cb) {
-        console.log('no me lo puedo creer: ',authorId)
+        console.log('no me lo puedo creer: ', authorId)
         Article.find({
             where: {
                 authorId: {
@@ -13,7 +12,6 @@ module.exports = function (Article) {
             }
         }, cb);
     };
-    
 
     Article.remoteMethod("findArticleByAuthorID", {
         accepts: {

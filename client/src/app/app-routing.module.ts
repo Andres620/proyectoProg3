@@ -9,13 +9,13 @@ import { EditorModule } from './modules/editor/editor.module';
 
 const routes: Routes = [
   {
-    path:'hero',
+    path: 'hero',
     component: HeroComponent
   },
   {
-    path:'',
+    path: '',
     pathMatch: 'full',
-    redirectTo:'/hero'
+    redirectTo: '/hero'
   },
   {
     path: 'home',
@@ -29,7 +29,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes, { onSameUrlNavigation: 'reload' }),
     UsersModule,
     ArticleModule,
     EditorModule

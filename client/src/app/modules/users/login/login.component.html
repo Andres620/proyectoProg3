@@ -24,15 +24,20 @@
                 <a><b>Forgot Password?</b></a>
               </label>
             </div>
+
             <div class="row">
-              <button (click)="onLoginBtnClick()" class="btn waves-effect waves-light"  name="action">LOGIN!</button>
+              <div class="g-recaptcha" data-sitekey="6Lc6FbMUAAAAAEo2yc64LmHdNRqgpvh7A7K6YzI7"
+                data-callback="recaptcha_callback"></div>
+
+              <button id="btn" (click)="onLoginBtnClick()" class="btn waves-effect waves-light" name="action"
+                disabled="true">LOGIN</button>
             </div>
-          </form>          
+          </form>
           <div class=" row register">
-              <label class="col m4">
-                <a><b>Register Now!</b></a>
-              </label>
-            </div>
+            <label class="col m4">
+              <a><b>Register Now!</b></a>
+            </label>
+          </div>
         </div>
       </h4>
     </div>
