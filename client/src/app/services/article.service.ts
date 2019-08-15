@@ -18,12 +18,12 @@ export class ArticleService {
   constructor(private http: HttpClient, private userservice: UserService) { }
   
   getAllArticles(): Observable<ArticleModel[]> {
-    return this.http.get<ArticleModel[]>(`${base_url}Articles`);
+    return this.http.get<ArticleModel[]>(`${base_url}articles`);
   }
 
-  getAllArticlesbyAuthorId(authorId: string): Observable<ArticleModel[]> {
+  getAllArticlesbyAuthorId(authorId: string): Observable<ArticleModel[]> {    //&access_token=${this.token}
     console.log("uthorId: "+authorId);
-    return this.http.get<ArticleModel[]>(`${base_url}articles/get-article-by-equals-authorId?authorId=${authorId}&access_token=${this.token}`)
+    return this.http.get<ArticleModel[]>(`${base_url}articles/get-article-by-equals-authorId?authorId=${authorId}`)
   }
 
   saveNewArticle(article: ArticleModel): Observable<ArticleModel> {

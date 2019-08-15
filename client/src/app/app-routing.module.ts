@@ -5,6 +5,7 @@ import { PageNotFoundComponent } from './template/page-not-found/page-not-found.
 import { UsersModule } from './modules/users/users.module';
 import { HomeComponent } from './template/home/home.component';
 import { ArticleModule } from './modules/article/article.module';
+import { EditorModule } from './modules/editor/editor.module';
 
 const routes: Routes = [
   {
@@ -30,7 +31,8 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes),
     UsersModule,
-    ArticleModule
+    ArticleModule,
+    EditorModule
   ],
   exports: [RouterModule]
 })

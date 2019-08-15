@@ -5,7 +5,6 @@
 module.exports = function (Article) {
     Article.findArticleByAuthorID = function (authorId, cb) {
         console.log('no me lo puedo creer: ',authorId)
-        console.log('no me lo puedo creer x2: ',authorId)
         Article.find({
             where: {
                 authorId: {
