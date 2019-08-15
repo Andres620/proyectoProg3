@@ -26,7 +26,7 @@ export class RegisterComponent implements OnInit {
     specialty:null,
     email: null,
     password: null,
-    rol: null,
+    rol: "author",
     id: null,
     user: null
   }
