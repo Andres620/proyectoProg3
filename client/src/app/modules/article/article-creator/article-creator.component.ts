@@ -22,7 +22,7 @@ export class ArticleCreatorComponent implements OnInit {
   userInfo = this.userService.getUserInformation();
   showUser(): void {
     let userInfo = this.userService.getUserInformation(); //retorna un null o la info del usuario
-    console.log('pero mira esa id papa', userInfo.id);
+    // console.log('pero mira esa id papa', userInfo.id);
   }
   article: ArticleModel = {
     id: null,

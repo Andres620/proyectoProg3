@@ -43,7 +43,7 @@ export class EditorCreatorEvaluatorComponent implements OnInit {
   }
   
   sendEmailForCreateEvaluator():void{
-    this.editorService.sendEmail("Hello user.realm","now you are a evaluator", "andres.1701625573@ucaldas.edu.co")
+    this.editorService.sendEmail("Hello "+this.user.realm," now you are a evaluator", "andres.1701625573@ucaldas.edu.co")
     console.log('correo enviado')
   }
 

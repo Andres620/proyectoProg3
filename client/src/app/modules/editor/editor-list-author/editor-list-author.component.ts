@@ -22,7 +22,6 @@ export class EditorListAuthorComponent implements OnInit {
   getAllArticles(): void {
     this.artService.getAllArticles().subscribe(items => {
       this.articleList = items;
-      console.log('culito',this.articleList);
     });
   }
 

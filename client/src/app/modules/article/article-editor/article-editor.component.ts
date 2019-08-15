@@ -37,7 +37,7 @@ export class ArticleEditorComponent implements OnInit {
     let id = this.route.snapshot.params["id"];
     this.articleService.getArticleById(id).subscribe(item => {
       this.article = item;
-      console.log('no entiendo', this.article)
+      // console.log('no entiendo', this.article)
     });
   }
 
