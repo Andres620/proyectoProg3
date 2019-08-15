@@ -11,14 +11,13 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ArticleEditorComponent implements OnInit {
 
-  constructor( private articleService: ArticleService, private route: ActivatedRoute, private router: Router) { }
+  constructor(private articleService: ArticleService, private route: ActivatedRoute, private router: Router) { }
 
-  art: ArticleModel=null;
+  art: ArticleModel = null;
 
   ngOnInit() {
     this.searchArticle();
   }
-
 
   article: ArticleModel = {
     id: null,
@@ -39,14 +38,14 @@ export class ArticleEditorComponent implements OnInit {
     let id = this.route.snapshot.params["id"];
     this.articleService.getArticleById(id).subscribe(item => {
       this.article = item;
-      console.log('no entiendo',this.article)
+      console.log('no entiendo', this.article)
     });
   }
-  updateArticle(){
+
+  updateArticle() {
     this.articleService.updateArticle(this.article).subscribe(item => {
       alert("This article has been updated suyccessfully!");
       this.router.navigate(["/user/author/article/list"]);
     });
   }
-
 }
