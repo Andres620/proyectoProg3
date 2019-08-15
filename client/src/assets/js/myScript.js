@@ -12,6 +12,6 @@ $(document).ready(function () {
 });
 
 function recaptcha_callback() {
-  var v = document.querySelector('#login-btn');
+  let v = document.querySelector('#btn');
   v.removeAttribute('disabled');
 }
