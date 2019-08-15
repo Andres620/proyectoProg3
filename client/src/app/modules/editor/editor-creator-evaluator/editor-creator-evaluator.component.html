@@ -53,6 +53,11 @@
                                 name="registereducationlevel" type="text" class="validate" required />
                             <label for="registereducationlevel">Education Level</label>
                         </div>
+                        <div class="input-field col s5">
+                            <input [(ngModel)]="user.specialty" id="registerspecialty"
+                                name="registerspecialty" type="text" class="validate" required />
+                            <label for="registerspecialty">specialty</label>
+                        </div>
                         <div class="row">
                             <div class="input-field col s3">
                                 <input [(ngModel)]="user.email" id="registeremail" name="registeremail" type="text"
@@ -65,11 +70,11 @@
                                 <label for="registerpassword">password</label>
                             </div>
                         </div>
-                        <div class="row center"><a class="waves-effect waves-light btn" (click)="saveNewUserEvaluator()">Register</a></div>
+                        <div class="row center"><a class="waves-effect waves-light btn"
+                                (click)="saveNewUserEvaluator()">Register</a></div>
                     </form>
                 </div>
             </h4>
         </div>
     </div>
 </div>
-
