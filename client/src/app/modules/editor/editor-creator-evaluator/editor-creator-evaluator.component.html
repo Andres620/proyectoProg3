@@ -1,0 +1,75 @@
+<div class="had-container">
+    <div class="row center registerCont"><br>
+        <div class="col m8 s8 offset-m2 offset-s2 center">
+            <h4 class="truncate bg-card-user">
+                <img src="https://cdn3.iconfinder.com/data/icons/happily-colored-snlogo/128/medium.png" alt=""
+                    class="circle responsive-img">
+                <div class="row signin">
+                    <h4>Create a new evaluator.</h4>
+                    <form class="col s12">
+                        <div class="input-field col s2">
+                            <input [(ngModel)]="user.realm" id="registerrealm" name="registerrealm" type="text"
+                                class="validate" required />
+                            <label for="registerrealm">realm</label>
+                        </div>
+                        <div class="input-field col s2">
+                            <input [(ngModel)]="user.firstname" id="registerfirstname" name="registerfirstname"
+                                type="text" class="validate" required />
+                            <label for="registerfirstname">First Name</label>
+                        </div>
+                        <div class="input-field col s3">
+                            <input [(ngModel)]="user.secondname" id="registersecondname" name="registersecondname"
+                                type="text" class="validate" />
+                            <label for="registersecondname">Second Name</label>
+                        </div>
+                        <div class="input-field col s2">
+                            <input [(ngModel)]="user.firstsurname" id="registerfirstsurname" name="registerfirstsurname"
+                                type="text" class="validate" required />
+                            <label for="registerfirstsurname">First Surname</label>
+                        </div>
+                        <div class="input-field col s3">
+                            <input [(ngModel)]="user.secondsurname" id="registersecondsurname"
+                                name="registersecondsurname" type="text" class="validate" />
+                            <label for="registersecondsurname">Seconde Surname</label>
+                        </div>
+                        <div class="input-field col s2">
+                            <input [(ngModel)]="user.country" id="registersecountry" name="registersecountry"
+                                type="text" class="validate" required />
+                            <label for="registersecountry">Country</label>
+                        </div>
+
+                        <div class="input-field col s5">
+                            <input [(ngModel)]="user.phone" id="registerphone" name="registerphone" type="text"
+                                class="validate" required />
+                            <label for="registerphone">Phone</label>
+                        </div>
+                        <div class="input-field col s2">
+                            <input [(ngModel)]="user.membership" id="registermembership" name="registermembership"
+                                type="text" class="validate" required />
+                            <label for="registermembership">Membership</label>
+                        </div>
+                        <div class="input-field col s5">
+                            <input [(ngModel)]="user.educationlevel" id="registereducationlevel"
+                                name="registereducationlevel" type="text" class="validate" required />
+                            <label for="registereducationlevel">Education Level</label>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s3">
+                                <input [(ngModel)]="user.email" id="registeremail" name="registeremail" type="text"
+                                    class="validate" required />
+                                <label for="registeremail">Email</label>
+                            </div>
+                            <div class="input-field col s3">
+                                <input [(ngModel)]="user.password" id="registerpassword" name="registerpassword"
+                                    type="password" class="validate" required />
+                                <label for="registerpassword">password</label>
+                            </div>
+                        </div>
+                        <div class="row center"><a class="waves-effect waves-light btn" (click)="saveNewUserEvaluator()">Register</a></div>
+                    </form>
+                </div>
+            </h4>
+        </div>
+    </div>
+</div>
+

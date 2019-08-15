@@ -63,5 +63,12 @@ export class UserService {
     return (JSON.parse(userInfo));
   }
 
+  getAllEvaluators(): Observable<UserModel[]> {    //&access_token=${this.token}
+    return this.http.get<UserModel[]>(`${base_url}editors/get-evaluators?rol=${'evaluator'}`)
+  }
+
+  getAllUsers(): Observable<UserModel[]> {
+    return this.http.get<UserModel[]>(`${base_url}users`);
+  }
 }
 

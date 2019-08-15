@@ -17,11 +17,11 @@ export class ArticleService {
 
   constructor(private http: HttpClient, private userservice: UserService) { }
   getAllArticles(): Observable<ArticleModel[]> {
-    return this.http.get<ArticleModel[]>(`${base_url}Articles`);
+    return this.http.get<ArticleModel[]>(`${base_url}articles`);
   }
 
-  getAllArticlesbyAuthorId(authorId: string): Observable<ArticleModel[]> {
-    console.log("uthorId: " + authorId);
+  getAllArticlesbyAuthorId(authorId: string): Observable<ArticleModel[]> {    //
+    console.log("uthorId: "+authorId);
     return this.http.get<ArticleModel[]>(`${base_url}articles/get-article-by-equals-authorId?authorId=${authorId}&access_token=${this.token}`)
   }
 

@@ -25,6 +25,7 @@ export class ArticleListComponent implements OnInit {
   getAllArticles(): void {
     this.artService.getAllArticles().subscribe(items => {
       this.articleList = items;
+      console.log('get all console',this.articleList)
     });
   }
   
@@ -32,7 +33,7 @@ export class ArticleListComponent implements OnInit {
   getAllArticlesbyAuthorId(): void {
     console.log(this.userInfo);
     this.artService.getAllArticlesbyAuthorId(this.userInfo.id).subscribe(items => {
-      console.log(items);
+      console.log('items desde article list',items);
       this.articleList = items;
       console.log('console de articlelist',this.articleList)
     });
