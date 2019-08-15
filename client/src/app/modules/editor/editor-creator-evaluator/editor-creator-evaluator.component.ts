@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
 import { Router } from '@angular/router';
 import { UserModel } from 'src/app/models/user.model';
+import { EditorService } from 'src/app/services/editor.service';
 
 @Component({
   selector: 'app-editor-creator-evaluator',
@@ -10,7 +11,7 @@ import { UserModel } from 'src/app/models/user.model';
 })
 export class EditorCreatorEvaluatorComponent implements OnInit {
 
-  constructor(private userService: UserService, private router: Router) { }
+  constructor(private userService: UserService, private editorService: EditorService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -38,6 +39,11 @@ export class EditorCreatorEvaluatorComponent implements OnInit {
       alert('The User evaluator has been stored successfully!!!');
       this.router.navigate(["/home"])   //cambiaar despues al home del usuario logeado 
     })
+  }
+  
+  sendEmailForCreateEvaluator():void{
+    this.editorService.sendEmail("Hello user.realm","now you are a evaluator", "andres.1701625573@ucaldas.edu.co")
+    console.log('correo enviado')
   }
 
 }
