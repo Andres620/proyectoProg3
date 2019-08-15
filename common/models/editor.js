@@ -1,10 +1,10 @@
 'use strict';
 
 module.exports = function (Editor) {
-    Editor.sendEmail = ( bodyMessage, subject, emailAddresses, cb) => {
+    Editor.sendEmail = (bodyMessage, subject, emailAddresses, cb) => {
         Editor.app.models.Email.send({
             to: emailAddresses,
-            from: "James Bond - 007",
+            from: "Editor Admin",
             subject: subject,
             text: bodyMessage,
             html: bodyMessage
@@ -43,4 +43,35 @@ module.exports = function (Editor) {
             ],
             returns: { arg: 'reponse', type: 'string' }
         });
+
+
+
+    //geteditors
+    Editor.findEvaluators = function (rol,cb) {
+        console.log('print desde editor.js',rol)
+        Editor.find({
+            where: {
+                rol: {
+                    gte: rol
+                }
+            }
+        }, cb);
+    };
+
+
+    Editor.remoteMethod("findEvaluators", {
+        accepts: {
+            arg: "rol",
+            type: "string"
+        },
+        returns: {
+            arg: "users",
+            type: "array"
+        },
+        http: {
+            path: "/get-evaluators",
+            verb: "get"
+        }
+    })
+
 };

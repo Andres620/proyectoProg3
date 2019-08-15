@@ -21,9 +21,9 @@ export class ArticleService {
     return this.http.get<ArticleModel[]>(`${base_url}articles`);
   }
 
-  getAllArticlesbyAuthorId(authorId: string): Observable<ArticleModel[]> {    //&access_token=${this.token}
+  getAllArticlesbyAuthorId(authorId: string): Observable<ArticleModel[]> {    //
     console.log("uthorId: "+authorId);
-    return this.http.get<ArticleModel[]>(`${base_url}articles/get-article-by-equals-authorId?authorId=${authorId}`)
+    return this.http.get<ArticleModel[]>(`${base_url}articles/get-article-by-equals-authorId?authorId=${authorId}&access_token=${this.token}`)
   }
 
   saveNewArticle(article: ArticleModel): Observable<ArticleModel> {

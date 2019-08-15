@@ -26,15 +26,17 @@
         </thead>
         <tbody>
             <tr *ngFor="let c of articleList.articles">
-                <td>{{c.title}}</td>
-                <td>{{c.authorFirstName}}</td>
-                <td>{{c.keywords}}</td>
-                <td>{{c.status}}</td>
-                <td><a *ngIf=" c.status == 'send'; else results" class="waves-effect waves-light btn"
+
+                <td *ngIf="c.authorId == userInfo.id">{{c.title}}</td>
+                <td *ngIf="c.authorId == userInfo.id">{{c.authorFirstName}}</td>
+                <td *ngIf="c.authorId == userInfo.id">{{c.keywords}}</td>
+                <td *ngIf="c.authorId == userInfo.id">{{c.status}}</td>
+                <td *ngIf="c.authorId == userInfo.id" ><a *ngIf=" c.status == 'send' && c.authorId == userInfo.id ; else results" class="waves-effect waves-light btn"
                         routerLink="/user/author/article/editor/{{c.id}}">Edit</a></td>
-                <ng-template #results>
-                    <td><a class="waves-effect waves-light btn">Results</a></td>
+                <ng-template #results *ngIf="c.authorId == userInfo.id">
+                    <td><a  class="waves-effect waves-light btn">Results</a></td>
                 </ng-template>
+
                 <!-- <td>
                     <a *ngIf="flagValidationToDelete; else validationButtons" class="waves-effect waves-light btn"
                         (click)="ChangeFlagValidation(c._id)">Delete</a>
