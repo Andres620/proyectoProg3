@@ -14,6 +14,7 @@ export class EditorCreatorEvaluatorComponent implements OnInit {
   constructor(private userService: UserService, private editorService: EditorService, private router: Router) { }
 
   ngOnInit() {
+    this.sendEmailForCreateEvaluator()
   }
 
   user: UserModel = {
